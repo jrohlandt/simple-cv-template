@@ -1,5 +1,5 @@
 // import data from "./data/sample-data.json" with {type: "json"};
-import data from "./data/main-data.json" with {type: "json"};
+import data from "./data/fullstack-data-1.json" with {type: "json"};
 
 console.log(data);
 
@@ -33,13 +33,13 @@ const createWorkExperienceCard = (exp, bottomSpacing=false) => {
     
     let card = `
     <div class="work-experience-card ${bottomSpacing ? 'space-bottom' : ''}"> 
-        <div>
-            <a href="${exp.companyUrl}" target="_blank">${exp.companyName}</a> 
+        <div class="experience-heading">
+            <a href="${exp.companyUrl}" target="_blank"><h3>${exp.companyName}</h3></a> 
             <span>${exp.duration}</span>
         </div>
-        <div>
-            <div>${exp.role}</div>
-            <div>${exp.locationType}</div>
+        <div class="experience-subheading">
+            <div class="role">${exp.role}</div>
+            <div class="location-type">${exp.locationType}</div>
         </div>
         <ul>
     `;
@@ -68,7 +68,7 @@ const educationEl = document.getElementById('education');
 const createEducationCard = (edu, bottomSpacing=false) => {
     let card = `
         <div>
-            ${edu.instituteName} ${edu.qualification}
+            <b>${edu.instituteName}: </b> ${edu.qualification}
         </div>
     `;
 

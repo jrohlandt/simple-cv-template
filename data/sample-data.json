@@ -15,11 +15,11 @@
   ],
   "workExperience": [
     {
-      "companyName": "Some Long Company Name Inc PTY LTD",
+      "companyName": "Companyname LTD",
       "companyUrl": "https://example.com",
       "role": "AI Whisperer and Quantum computing wizard",
       "duration": "Jul 2022 - Present",
-      "locationType": "Hybrid (Teleport to office)",
+      "locationType": "Remote",
       "bulletPoints": [
         "Single handedly created an <a href='/' target='_blank'>AI workflow</a> that has made me and all my colleagues redundant.",
         "Tripled user engagement by replacing unpredictable human users with AI Agents",
@@ -28,7 +28,22 @@
       ]
     },
     {
-      "companyName": "Some Long Company Name Inc PTY LTD",
+      "companyName": "Companyname 2",
+      "companyURL": "https://example.com",
+      "role": "Senior Fullstack Developer",
+      "duration": "Jan 2019 - Jun 2022",
+      "locationType": "On-Site",
+      "bulletPoints": [
+        "Lead development of the best app in the world using the best programming language and the latest frameworks",
+        "Completed project before the client even knew they needed such an app",
+        "Boosted sales by a factor of 10000",
+        "Completely eliminated latency. We now have 0ms response times",
+        "Reduced hosting costs to $0 by eliminating the need to host the application on servers. It is now hosted in the imaginations of our users.",
+        "Speaking of users. The application is now a worldwide phenomenon and every single human is now a daily user."
+      ]
+    },
+    {
+      "companyName": "Company 3",
       "companyURL": "https://example.com",
       "role": "Senior Fullstack Developer",
       "duration": "Jan 2019 - Jun 2022",

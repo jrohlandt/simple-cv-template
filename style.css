@@ -1,0 +1,64 @@
+:root {
+  --main-font-size: 14px;
+  --h1-font-size: 22px;
+  --h2-font-size: 16px;
+  --top-spacing: 10px;
+  --bottom-spacing: 10px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: var(--h1-font-size);
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+body {
+  font-family: Arial;
+  font-size: var(--main-font-size);
+  display: flex;
+  justify-content: center;
+}
+
+.main-content-wrapper {
+  width: 800px;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section h2 {
+  font-size: var(--h2-font-size);
+}
+
+.space-top {
+  margin-top: var(--top-spacing);
+}
+
+.space-bottom {
+  margin-bottom: var(--bottom-spacing);
+}
+
+.border-bottom {
+  border-bottom: solid black 2px;
+}
+
+.work-experience-card {
+}
+
+.work-experience-card ul {
+  list-style: circle;
+  padding-left: 20px;
+}

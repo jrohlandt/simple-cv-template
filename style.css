@@ -41,6 +41,10 @@ ul {
   list-style: none;
 }
 
+li  {
+  margin-bottom: 3px;
+}
+
 .main-content-wrapper {
   width: 800px;
 }
@@ -104,5 +108,7 @@ header {
 .location-type {
   font-style: italic;
 }
+
+
 
 

@@ -21,11 +21,11 @@ summaryEl.innerHTML = data.summary;
 
 // SKILLS
 const skillsEl = document.getElementById('skills');
-let skillsText = "";
 data.skills.forEach((line) => {
-    skillsText += line + '<br>';
+    const li =  document.createElement('li');
+    li.innerHTML = line;
+    skillsEl.appendChild(li);
 });
-skillsEl.innerHTML = skillsText;
 
 // WORK EXPERIENCE
 const workEl = document.getElementById('work');
@@ -67,9 +67,9 @@ data.workExperience.forEach((exp, i, arr) => {
 const educationEl = document.getElementById('education');
 const createEducationCard = (edu, bottomSpacing=false) => {
     let card = `
-        <div>
-            <b>${edu.instituteName}: </b> ${edu.qualification}
-        </div>
+        <li>
+            ${edu.qualification}
+        </li>
     `;
 
     const el = document.createElement('li');

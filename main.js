@@ -1,8 +1,7 @@
-// import data from "./data/sample-data.json" with {type: "json"};
-import data from "./data/fullstack-data-1.json" with {type: "json"};
+import data from "./data/sample-data.json" with {type: "json"};
 
-console.log(data);
 
+document.title = data.name + ' CV';
 // NAME
 const nameEl = document.getElementById('name');
 nameEl.innerHTML = data.name;
@@ -13,11 +12,18 @@ locationEl.innerHTML = data.location;
 
 // CONTACT
 const contactEl = document.getElementById('contact');
-contactEl.innerHTML = data.contact;
+let contactInfoLine = "";
+data.contact.forEach((item, i, arr) => {
+    contactInfoLine += item;
+    if (i !== arr.length - 1) contactInfoLine += " | ";
+})
+contactEl.innerHTML = contactInfoLine;
 
 // SUMMARY
 const summaryEl = document.getElementById('summary');
-summaryEl.innerHTML = data.summary;
+let summaryParagraph = "";
+data.summary.forEach(sentence => summaryParagraph += sentence + " ");
+summaryEl.innerHTML = summaryParagraph;
 
 // SKILLS
 const skillsEl = document.getElementById('skills');

@@ -1,8 +1,11 @@
 {
   "name": "Firstname Lastname",
   "location": "S.Suburbs, Cape Town, South Africa",
-  "contact": "someone12345@example.com | +55 55 555 555 | <a href='https://github.com/yourusername' target='_blank'>github.com/yourusername</a> | <a href='https://linkedin.com/in/yourusername-link-here' target='_blank'>linkedin.com/in/yourusername-link-here</a>",
-  "summary": "World renowned Senior Allstack developer experienced in building performant and scalable web applications that will out perform your expectations and your competitors.",
+  "contact": ["someone12345@example.com", "+55 55 555 555", "<a href='https://github.com/yourusername' target='_blank'>github.com/yourusername</a>", "<a href='https://linkedin.com/in/yourusername' target='_blank'>linkedin.com/in/yourusername</a>"],
+  "summary": [
+    "World renowned Senior Everystack developer experienced in building performant and scalable web applications that will out perform your expectations and your competitors.", 
+    "Some more impressive stuff."
+  ],
   "skills": [
     "<span>Backend: </span> PHP, Laravel, PostgresSQL, MySQL",
     "<span>Frontend: </span> React, TypeScript, Redux, Electron"

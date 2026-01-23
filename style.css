@@ -92,6 +92,7 @@ header {
 
 .experience-heading span {
   font-weight: bold;
+  font-size: var(--h3-font-size);
 }
 
 .experience-subheading {

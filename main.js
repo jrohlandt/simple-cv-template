@@ -1,44 +1,42 @@
-import data from "./data/sample-data.json" with {type: "json"};
+import data from "./data/sample-data.json" with { type: "json" };
 
-
-document.title = data.name + ' CV';
+document.title = data.name + " CV";
 // NAME
-const nameEl = document.getElementById('name');
+const nameEl = document.getElementById("name");
 nameEl.innerHTML = data.name;
 
 // LOCATION
-const locationEl = document.getElementById('location');
+const locationEl = document.getElementById("location");
 locationEl.innerHTML = data.location;
 
 // CONTACT
-const contactEl = document.getElementById('contact');
+const contactEl = document.getElementById("contact");
 let contactInfoLine = "";
 data.contact.forEach((item, i, arr) => {
-    contactInfoLine += item;
-    if (i !== arr.length - 1) contactInfoLine += " | ";
-})
+  contactInfoLine += item;
+  if (i !== arr.length - 1) contactInfoLine += " | ";
+});
 contactEl.innerHTML = contactInfoLine;
 
 // SUMMARY
-const summaryEl = document.getElementById('summary');
+const summaryEl = document.getElementById("summary");
 let summaryParagraph = "";
-data.summary.forEach(sentence => summaryParagraph += sentence + " ");
+data.summary.forEach((sentence) => (summaryParagraph += sentence + " "));
 summaryEl.innerHTML = summaryParagraph;
 
 // SKILLS
-const skillsEl = document.getElementById('skills');
+const skillsEl = document.getElementById("skills");
 data.skills.forEach((line) => {
-    const li =  document.createElement('li');
-    li.innerHTML = line;
-    skillsEl.appendChild(li);
+  const li = document.createElement("li");
+  li.innerHTML = line;
+  skillsEl.appendChild(li);
 });
 
 // WORK EXPERIENCE
-const workEl = document.getElementById('work');
-const createWorkExperienceCard = (exp, bottomSpacing=false) => {
-    
-    let card = `
-    <div class="work-experience-card ${bottomSpacing ? 'space-bottom' : ''}"> 
+const workEl = document.getElementById("work");
+const createWorkExperienceCard = (exp, bottomSpacing = false) => {
+  let card = `
+    <div class="work-experience-card ${bottomSpacing ? "space-bottom" : ""}"> 
         <div class="experience-heading">
             <a href="${exp.companyUrl}" target="_blank"><h3>${exp.companyName}</h3></a> 
             <span>${exp.duration}</span>
@@ -50,40 +48,38 @@ const createWorkExperienceCard = (exp, bottomSpacing=false) => {
         <ul>
     `;
 
-    exp.bulletPoints.forEach(b => {
-        card += `<li>${b}</li>`;
-    });
+  exp.bulletPoints.forEach((b) => {
+    card += `<li>${b}</li>`;
+  });
 
-    card += `
+  card += `
         </ul>
     </div>
     `;
 
-    const el = document.createElement('li');
-    el.innerHTML = `<li>${card}</li>`;
-    workEl.appendChild(el);
-}
-
+  const el = document.createElement("li");
+  el.innerHTML = `<li>${card}</li>`;
+  workEl.appendChild(el);
+};
 
 data.workExperience.forEach((exp, i, arr) => {
-    createWorkExperienceCard(exp, i !== arr.length - 1);
+  createWorkExperienceCard(exp, i !== arr.length - 1);
 });
 
 // EDUCATION
-const educationEl = document.getElementById('education');
-const createEducationCard = (edu, bottomSpacing=false) => {
-    let card = `
+const educationEl = document.getElementById("education");
+const createEducationCard = (edu, bottomSpacing = false) => {
+  let card = `
         <li>
             ${edu.qualification}
         </li>
     `;
 
-    const el = document.createElement('li');
-    el.innerHTML = `<li>${card}</li>`;
-    educationEl.appendChild(el);
+  const el = document.createElement("li");
+  el.innerHTML = `<li>${card}</li>`;
+  educationEl.appendChild(el);
 };
 
 data.education.forEach((edu, i, arr) => {
-    createEducationCard(edu, i !== arr.length - 1);
+  createEducationCard(edu, i !== arr.length - 1);
 });
-
